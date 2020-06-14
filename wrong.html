@@ -1,0 +1,110 @@
+ <!-- Second navbar for sign in -->
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<link href="//netdna.bootstrapcdn.com/bootst..." rel="stylesheet" id="bootstrap-css">
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<!-- Fogli di stile CSS -->
+<link href="css/top_navbar.css" rel="stylesheet" type="text/css">
+
+<div class="container-fluid">
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-2">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#"><img style="width: 40%;" src="threeminds_logo.jpg"></a>
+		  </div>
+    
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="navbar-collapse-2">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Contatti</a></li>
+            <li><a href="registrati.html">Registrati</a></li>
+            <li><a href="#">News</a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li>
+             </li>
+          </ul>
+
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container -->
+	  </nav><!-- /.navbar -->
+	  </div><!-- /.container-fluid -->
+
+<link href="css/login.css" rel="stylesheet" type="text/css">
+
+<script> function checkForm(){
+
+	if(document.MyForm.username.value.trim()!="")
+
+	if(document.MyForm.password.value.trim()!="")
+
+		return true;
+
+	alert("Non lasciare campi vuoti");
+
+		return false;
+
+		}
+
+</script>
+
+            
+
+
+<section id="login">
+
+    <div class="container">
+
+    	<div class="row">
+
+    	    <div class="col-xs-12">
+
+        	    <div class="form-wrap">
+
+				<h1>Credenziali errate. Riprova.</h1>
+
+                    <form role="form" action="login.php" method="post" autocomplete="off" name="MyForm">
+
+                        <div class="form-group">
+
+                            <label for="email" class="sr-only">Email</label>
+
+                            <input type="email" name="username" id="username" class="form-control" placeholder="tuoindirizzo@esempio.com">
+
+                        </div>
+
+						
+
+                        <div class="form-group">
+
+                            <label for="key" class="sr-only">Password</label>
+
+                            <input type="password" name="password" id="password" class="form-control" placeholder="password">
+
+                        </div>
+
+
+
+                        <input type="submit" id="btn-login" class="btn btn-custom btn-lg btn-block" value="Log in" onClick="return checkForm()">
+
+                    </form>
+
+                    <a href="recovery.html" class="forget" data-toggle="modal" data-target=".forget-modal">Password dimenticata?</a>
+
+                    </div>
+
+    		</div> <!-- /.col-xs-12 -->
+    	</div> <!-- /.row -->
+    </div> <!-- /.container -->
+</section>

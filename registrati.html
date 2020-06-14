@@ -1,0 +1,218 @@
+<div w3-include-html="/portal/top_navbar.html"></div>
+<script src="http://www.w3schools.com/lib/w3data.js"></script>
+<script>
+w3IncludeHTML();
+</script>
+<link href="/portal/css/registrati.css" rel="stylesheet" type="text/css">
+<!-- Funzione javascript per la form -->
+
+<!-- Controllo sulle caselle vuote -->
+
+<script> function checkForm(){
+
+	if(document.MyForm.username.value.trim()!="")
+
+	if(document.MyForm.password.value.trim()!="")
+
+		return true;
+
+	alert("Non lasciare campi vuoti");
+
+		return false;
+
+		}
+
+</script>
+
+
+
+    <div class="container">
+    	<div class="row">
+    	    <div class="col-xs-12">
+        	    <div class="form-wrap">
+				<h1 id="intro">Benvenuto!</h1>
+                <h1>Registra la tua azienda: </h1>
+
+                    
+
+<section id='registration-form'>
+	<div>			
+			<form role="form" action="login.php" method="post" autocomplete="off" name="MyForm">
+				<tr>
+					<td class="lbl">
+						<span class="reqfield">*</span>&nbsp;<label for="az_rag_soc" class="control-label">Ragione Sociale:</label>
+					</td>
+					<td>
+						<input name="az_rag_soc" id="az_rag_soc" type="text" size="30" maxlength="150" data-validation="required length" data-validation-length="max150">
+					</td>
+				</tr>
+				</br>
+				<tr>
+					<td class="lbl">
+						<span class="reqfield" id="az_forma_soc_reqfield">*&nbsp;</span><label for="az_forma_soc" class="control-label">Forma Societaria:</label>
+					</td>
+					<td>
+						<select name="az_forma_soc" id="az_forma_soc" data-validation="required">
+							<option selected value="">--Seleziona--</option>
+						</select>
+					</td>
+				</tr>
+				</br>
+				<tr>
+					<td>
+						&nbsp;
+					</td>
+					<td>						
+					</td>
+				</tr>
+				</br>
+				<tr>
+					<td class="lbl">
+						<span class="reqfield">*</span>&nbsp;<label for="az_ind" class="control-label">Indirizzo:</label>
+					</td>
+					<td>
+						<input name="az_ind" id="az_ind" type="text" size="30" maxlength="150" data-validation="required length" data-validation-length="max150">
+					</td>
+				</tr>
+				</br>
+				<tr id=>
+					<td class="lbl">
+						<span class="reqfield">*</span>&nbsp;<label for="az_cap" class="control-label">CAP/Codice postale:</label>
+					</td>
+					<td>
+						<input name="az_cap" id="az_cap" type="text" size="30" maxlength="30" data-validation="required length" data-validation-length="max30">
+					</td>
+				</tr>
+				</br>
+				<tr>
+					<td class="lbl">
+						<span class="reqfield">*</span>&nbsp;<label for="az_stato" class="control-label">Nazione:</label>
+					</td>
+					<td>
+						<select name="az_stato" id="az_stato" data-validation="required">
+							<option selected value="">--Seleziona--</option>
+						</select>					
+						<!-- <input name="az_stato" id="az_stato" type="text" size="30" maxlength="50" data-validation="required length" data-validation-length="max50" readonly> -->
+					</td>
+				</tr>
+				</br>
+				<tr>
+					<td class="lbl">
+						<span class="reqfield" id="az_reg_reqfield">*&nbsp;</span><label for="az_reg" class="control-label">Regione:</label>
+					</td>
+					<td>
+						<select name="az_reg" id="az_reg" data-validation="required">
+							<option selected value="">--Seleziona--</option>
+						</select>
+						<input style="display:none" name="az_reg_est" id="az_reg_est" type="text" size="30" maxlength="30" data-validation="length" data-validation-length="max30">
+					</td>
+				</tr>
+				</br>				
+				<tr>
+					<td class="lbl">
+						<span class="reqfield" id="az_prov_reqfield">*&nbsp;</span><label for="az_prov" class="control-label">Provincia:</label>
+					</td>
+					<td>
+						<select name="az_prov" id="az_prov" data-validation="required">
+							<option selected value="">--Seleziona--</option>
+						</select>
+						<input style="display:none" name="az_prov_est" id="az_prov_est" type="text" size="30" maxlength="50" data-validation="length" data-validation-length="max50">
+					</td>
+				</tr>
+				</br>
+				<tr>
+					<td class="lbl">
+						<span class="reqfield">*</span>&nbsp;<label for="az_comune" class="control-label">Comune:</label>
+					</td>
+					<td>
+						<select name="az_comune" id="az_comune" data-validation="required">
+							<option selected value="">--Seleziona--</option>
+						</select>
+						<input style="display:none" name="az_comune_est" id="az_comune_est" type="text" size="30" maxlength="50" data-validation="required length" data-validation-length="max50">
+					</td>
+				</tr>
+				</br>
+				<tr>
+					<td>
+						&nbsp;
+					</td>
+					<td>						
+					</td>
+				</tr>
+				</br>
+				<tr>
+					<td class="lbl">
+						<span class="reqfield" id="az_piva_reqfield">*&nbsp;</span><label for="az_piva" class="control-label">Partita IVA:</label>
+					</td>
+					<td>
+						<input name="az_piva" id="az_piva" type="text" size="30" maxlength="50" data-validation="required itpiva length" data-validation-length="max50">
+					</td>
+				</tr>
+				</br>
+				<tr>
+					<td class="lbl">
+						<span class="reqfield" id="az_cf_reqfield">*&nbsp;</span><label for="az_cf" class="control-label">Codice Fiscale:</label>
+					</td>
+					<td>
+						<input name="az_cf" id="az_cf" type="text" size="30" maxlength="50" data-validation="required length" data-validation-length="max50">
+					</td>
+				</tr>
+				</br>
+				<tr>
+					<td>
+						&nbsp;
+					</td>
+					<td>						
+					</td>
+				</tr>
+				</br>
+				<tr>
+					<td class="lbl">
+						<span class="reqfield">*</span>&nbsp;<label for="az_tel" class="control-label">Telefono ufficio:</label>
+					</td>
+					<td>
+						<input name="az_tel" id="az_tel" type="text" size="30" maxlength="50" data-validation="required length" data-validation-length="max50">
+					</td>
+				</tr>
+				</br>
+				<tr>
+					<td class="lbl">
+						<label for="az_fax" class="control-label">Fax:</label>
+					</td>
+					<td>
+						<input name="az_fax" id="az_fax" type="text" size="30" maxlength="50" data-validation="length" data-validation-length="max50">
+					</td>
+				</tr>
+				</br>
+				<tr>
+					<td class="lbl">
+						<label for="az_web" class="control-label">Sito web:</label>
+					</td>
+					<td>
+						<input name="az_web" id="az_web" type="text" size="30" maxlength="150" data-validation="iturl length" data-validation-length="max150" data-validation-optional="true">
+					</td>
+				</tr>
+				</br>
+				<tr>
+					<td class="lbl">
+						<span class="reqfield">*</span>&nbsp;<label for="az_email" class="control-label">E-mail:</label>
+					</td>
+					<td>
+						<input name="az_email" id="az_email" type="text" size="30" maxlength="150" data-validation="required email length" data-validation-length="max150">
+					</td>
+				</tr>
+				</br>
+				<p>*Campi obbligatori</p>
+</div>
+</section>
+
+                        <input type="submit" id="btn-login" class="btn btn-custom btn-lg btn-block" value="Registrati" onClick="return checkForm()">
+
+                    </form>
+
+                    </div>
+
+    		</div> <!-- /.col-xs-12 -->
+    	</div> <!-- /.row -->
+    </div> <!-- /.container -->
+</section>
